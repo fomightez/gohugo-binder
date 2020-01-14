@@ -26,8 +26,13 @@
 #echo $GOPATH
 
 
+
 # Install up-to-date HUGO. Apt only is getting version 0.40
 # Following directions at https://vexxhost.com/resources/tutorials/how-to-install-and-use-hugo-the-static-site-generator-on-ubuntu-14-04/
 # and combining with more up to date info at https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/
-#curl -O https://github.com/spf13/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.deb
-# dpkg -i hugo_0.62.2_Linux-64bit.deb
+# didn't work because I couldn't use dpkg without superuse permissions
+# So now I install old version (0.40) with apt and when run `which hugo`, I get `/usr/bin/hugo`. And now going to try to update that
+#  to more recent adapting instructions from https://gohugo.io/getting-started/installing/#install-hugo-from-tarball
+curl -O https://github.com/spf13/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
+tar -xvzf hugo_X.Y_osx-64bit.tgz
+cp hugo /usr/bin/.
