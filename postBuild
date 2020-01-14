@@ -27,4 +27,4 @@ echo $GOPATH
 # Following directions at https://vexxhost.com/resources/tutorials/how-to-install-and-use-hugo-the-static-site-generator-on-ubuntu-14-04/
 # and combining with more up to date info at https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/
 curl -O https://github.com/spf13/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.deb
-sudo dpkg -i hugo_0.62.2_Linux-64bit.deb
+su dpkg -i hugo_0.62.2_Linux-64bit.deb
