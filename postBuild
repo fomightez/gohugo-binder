@@ -32,7 +32,8 @@
 # and combining with more up to date info at https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/
 # didn't work because I couldn't use dpkg without superuse permissions
 # So now I install old version (0.40) with apt and when run `which hugo`, I get `/usr/bin/hugo`. And now going to try to update that
-#  to more recent adapting instructions from https://gohugo.io/getting-started/installing/#install-hugo-from-tarball
+#  to more recent adapting instructions from https://gohugo.io/getting-started/installing/#install-hugo-from-tarball (it is from mac
+# but may be useful for updating)
 curl -O https://github.com/spf13/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
-tar -xvzf hugo_X.Y_osx-64bit.tgz
+tar -xvzf hugo_0.62.2_Linux-64bit.tar.gz
 cp hugo /usr/bin/.
