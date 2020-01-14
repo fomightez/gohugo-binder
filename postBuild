@@ -3,24 +3,27 @@
 # ----------Install GO language -------------
 # based on https://github.com/go-hep/binder/blob/master/postBuild
 # and https://golang.org/dl/
+# UPDATE: moved go installation to apt based on https://github.com/aborruso/bashnotebook/blob/master/binder/apt.txt
+# note though below was working except wasn't in the path so I could type `go` (somehow hugo which uses it seemed to work desipte that). probably needed to add
+# a link to it in `~/.local/bin` like does at https://github.com/aborruso/bashnotebook/blob/0de5d657de745fffe53ed1acc35d01c75d389b6e/binder/postBuild#L48
 
-set -e
+#set -e
 
-GOVERS=1.13.6
+#GOVERS=1.13.6
 
-mkdir -p \
-	$HOME/.local/go/$GOVERS \
-	$HOME/go
+#mkdir -p \
+#	$HOME/.local/go/$GOVERS \
+#	$HOME/go
 
-echo "::: install Go ${GOVERS}..."
-curl -O -L https://golang.org/dl/go${GOVERS}.linux-amd64.tar.gz
-tar -C $HOME/.local/go/$GOVERS -zxf go${GOVERS}.linux-amd64.tar.gz
-/bin/rm go${GOVERS}.linux-amd64.tar.gz
+#echo "::: install Go ${GOVERS}..."
+#curl -O -L https://golang.org/dl/go${GOVERS}.linux-amd64.tar.gz
+#tar -C $HOME/.local/go/$GOVERS -zxf go${GOVERS}.linux-amd64.tar.gz
+#/bin/rm go${GOVERS}.linux-amd64.tar.gz
 
-export GOROOT=$HOME/.local/go/$GOVERS/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-echo $GOPATH
+#export GOROOT=$HOME/.local/go/$GOVERS/go
+#export GOPATH=$HOME/go
+#export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+#echo $GOPATH
 
 
 # Install up-to-date HUGO. Apt only is getting version 0.40
