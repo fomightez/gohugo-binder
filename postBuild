@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# ----------Install GO language -------------
+# based on https://github.com/go-hep/binder/blob/master/postBuild
+# and https://golang.org/dl/
+
+set -e
+
+GOVERS=1.13.6
+
+mkdir -p \
+	$HOME/.local/go/$GOVERS \
+	$HOME/go
+
+echo "::: install Go ${GOVERS}..."
+curl -O -L https://golang.org/dl/go${GOVERS}.linux-amd64.tar.gz
+tar -C $HOME/.local/go/$GOVERS -zxf go${GOVERS}.linux-amd64.tar.gz
+/bin/rm go${GOVERS}.linux-amd64.tar.gz
+
+export GOROOT=$HOME/.local/go/$GOVERS/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
