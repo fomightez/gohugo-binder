@@ -35,5 +35,5 @@
 #  to more recent adapting instructions from https://gohugo.io/getting-started/installing/#install-hugo-from-tarball (it is from mac
 # but may be useful for updating)
 curl -O https://github.com/spf13/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
-tar -xvzf hugo_0.62.2_Linux-64bit.tar.gz
-cp hugo /usr/bin/.
+#tar -xvzf hugo_0.62.2_Linux-64bit.tar.gz
+#cp hugo /usr/bin/.
