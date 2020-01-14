@@ -36,5 +36,6 @@
 # but may be useful for updating)
 curl -OL https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
 tar -xvzf hugo_0.62.2_Linux-64bit.tar.gz
+chmod 777 /usr/bin/
 rm /usr/bin/hugo #delete old file
 cp hugo /usr/bin/.
