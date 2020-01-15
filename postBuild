@@ -49,5 +49,5 @@ tar -C ~/.local/bin -xvzf hugo_0.62.2_Linux-64bit.tar.gz
 # clean up
 rm hugo_0.62.2_Linux-64bit.tar.gz
 rm ~/.local/bin/LICENSE
-rm ~/.local/bin/README.MD
+rm ~/.local/bin/README.md
 cd ~
