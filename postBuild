@@ -41,8 +41,8 @@ cd ~
 # So now I install old version (0.40) with apt and when run `which hugo`, I get `/usr/bin/hugo`. And now going to try to update that
 #  to more recent adapting instructions from https://gohugo.io/getting-started/installing/#install-hugo-from-tarball (it is from mac
 # but may be useful for updating)
-curl -OL https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
-tar -xvzf hugo_0.62.2_Linux-64bit.tar.gz
+#curl -OL https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
+#tar -xvzf hugo_0.62.2_Linux-64bit.tar.gz
 #chmod 777 /usr/bin/
 #rm /usr/bin/hugo #delete old file
 #cp hugo /usr/bin/.
