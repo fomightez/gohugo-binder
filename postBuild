@@ -34,7 +34,9 @@ cd ~/.local/bin
 ln -s $GOROOT/bin/go go
 cd ~
 
-# Install up-to-date HUGO. Apt only is getting version 0.40
+
+# Install up-to-date HUGO. 
+# Apt only is getting version 0.40. So don't use `apt.txt` as route to install.
 # Following directions at https://vexxhost.com/resources/tutorials/how-to-install-and-use-hugo-the-static-site-generator-on-ubuntu-14-04/
 # and combining with more up to date info at https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/
 # didn't work because I couldn't use dpkg without superuse permissions
@@ -46,8 +48,9 @@ cd ~/go #just using this directory that is empty currently as a place to unpack 
 # , combined with https://github.com/go-hep/binder/blob/master/postBuild approach
 curl -OL https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
 tar -C ~/.local/bin -xvzf hugo_0.62.2_Linux-64bit.tar.gz
-# clean up
-rm hugo_0.62.2_Linux-64bit.tar.gz
+# clean up hugo install
+#rm hugo_0.62.2_Linux-64bit.tar.gz # so note below for `rm ~/go`
 rm ~/.local/bin/LICENSE
 rm ~/.local/bin/README.md
+rm ~/go #replaces `rm hugo_0.62.2_Linux-64bit.tar.gz` because also don't need parent in this case
 cd ~
