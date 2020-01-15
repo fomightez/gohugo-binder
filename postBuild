@@ -13,7 +13,7 @@
 
 set -e
 
-GOVERS=1.13.6
+#GOVERS=1.13.6
 
 mkdir -p \
 	$HOME/.local/go/$GOVERS \
@@ -27,6 +27,22 @@ tar -C $HOME/.local/go/$GOVERS -zxf go${GOVERS}.linux-amd64.tar.gz
 
 export GOROOT=$HOME/.local/go/$GOVERS/go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$ROOT
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+echo $GOPATH
+# add it to path like in https://github.com/aborruso/bashnotebook/blob/0de5d657de745fffe53ed1acc35d01c75d389b6e/binder/postBuild#L48
+cd ~/.local/bin
+ln -s $GOROOT/bin go
+cd ~
 
-
+# Install up-to-date HUGO. Apt only is getting version 0.40
+# Following directions at https://vexxhost.com/resources/tutorials/how-to-install-and-use-hugo-the-static-site-generator-on-ubuntu-14-04/
+# and combining with more up to date info at https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/
+# didn't work because I couldn't use dpkg without superuse permissions
+# So now I install old version (0.40) with apt and when run `which hugo`, I get `/usr/bin/hugo`. And now going to try to update that
+#  to more recent adapting instructions from https://gohugo.io/getting-started/installing/#install-hugo-from-tarball (it is from mac
+# but may be useful for updating)
+curl -OL https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
+tar -xvzf hugo_0.62.2_Linux-64bit.tar.gz
+#chmod 777 /usr/bin/
+#rm /usr/bin/hugo #delete old file
+#cp hugo /usr/bin/.
