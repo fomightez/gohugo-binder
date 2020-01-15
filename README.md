@@ -6,7 +6,10 @@ Go-based static site generator HUGO running via binder served sessions.
 
 ------
 
-[Hugo](https://gohugo.io/)
+
+An introductory notebook that steps through a quick start with [Hugo](https://gohugo.io/) opens upon session launch.
+
+Step through the introductory notebook to see how to use hugo in sessions launched from here.
 
 Technical details
 -----------------
