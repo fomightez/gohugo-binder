@@ -17,6 +17,7 @@ GOVERS=1.13.6
 
 mkdir -p \
 	$HOME/.local/go/$GOVERS \
+	$HOME/.local/bin \
 	$HOME/go
 
 echo "::: install Go ${GOVERS}..."
@@ -28,4 +29,4 @@ export GOROOT=$HOME/.local/go/$GOVERS/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$ROOT
 
-mkdir -p ~/.local/bin
+
