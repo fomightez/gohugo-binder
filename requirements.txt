@@ -1,0 +1,3 @@
+jupyterlab==1.2.4
+jupyter_contrib_nbextensions
+jupyter-server-proxy

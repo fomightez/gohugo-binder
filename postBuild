@@ -53,3 +53,9 @@ rm hugo_0.62.2_Linux-64bit.tar.gz
 rm ~/.local/bin/LICENSE
 rm ~/.local/bin/README.md
 cd ~
+
+
+# Trying to get development server accessible in session
+# Jupyter/Jupyterlab extension for proxying internal applications
+jupyter serverextension enable --sys-prefix jupyter_server_proxy
+jupyter labextension install jupyterlab-server-proxy --no-build 
