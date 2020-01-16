@@ -1,4 +1,3 @@
-jupyterlab==1.2.4 #COMMENTING OUT Because right now doesn't work with JupyterLab 1.0 and above; can either have old JupyterLab or the serverproxy but not both
+jupyterlab==1.2.4 #HAD BEEN COMMENTING OUT Because right now doesn't work with JupyterLab 1.0 and above; can either have old JupyterLab or the serverproxy but not both
 jupyter_contrib_nbextensions
 jupyter-server-proxy
-jupyterlab-server-proxy-saulshanabrook #try the solution from https://github.com/jupyterhub/jupyter-server-proxy/issues/139#issuecomment-544763062 for newer JupyterLab
