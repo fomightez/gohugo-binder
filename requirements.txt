@@ -1,3 +1,4 @@
 #jupyterlab==1.2.4 seems serverproxy has a problem with this version
+jupyterlab==1.0.0
 jupyter_contrib_nbextensions
 jupyter-server-proxy
