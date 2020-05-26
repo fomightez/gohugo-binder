@@ -40,19 +40,23 @@ cd ~
 # Following directions at https://vexxhost.com/resources/tutorials/how-to-install-and-use-hugo-the-static-site-generator-on-ubuntu-14-04/
 # and combining with more up to date info at https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/
 # didn't work because I couldn't use dpkg without superuse permissions
-# So now I install current version (0.62.2) by adapting instructions from 
+# So now I install current version (0.71.1) by adapting instructions from 
 # https://gohugo.io/getting-started/installing/#install-hugo-from-tarball (it is using instructionsfrom mac
 # but https://discourse.gohugo.io/t/quick-start-doesnt-work-on-ubuntu/14686/8 said to be useful for installing for Ubuntu too)
 cd ~/go #just using this directory that is empty currently as a place to unpack hugo so README doesn't clobber my repo README &
 # move it to path similar to https://github.com/aborruso/bashnotebook/blob/0de5d657de745fffe53ed1acc35d01c75d389b6e/binder/postBuild#L48
-# , combined with https://github.com/go-hep/binder/blob/master/postBuild approach
-curl -OL https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
-tar -C ~/.local/bin -xvzf hugo_0.62.2_Linux-64bit.tar.gz
+# , combined with https://github.com/go-hep/binder/blob/master/postBuild approach. Use extended
+# version of Hugh so [Docsy](https://themes.gohugo.io/docsy/) theme works, see prerequisites at https://themes.gohugo.io/docsy/
+curl -OL https://github.com/gohugoio/hugo/releases/download/v0.71.1/hugo_extended_0.71.1_Linux-64bit.tar.gz
+tar -C ~/.local/bin -xvzf hugo_extended_0.71.1_Linux-64bit.tar.gz
 # clean up hugo install
-rm hugo_0.62.2_Linux-64bit.tar.gz
+rm hugo_extended_0.71.1_Linux-64bit.tar.gz
 rm ~/.local/bin/LICENSE
 rm ~/.local/bin/README.md
 cd ~
+# install postCSS following 'Prequisites' for theme listed at https://themes.gohugo.io/docsy/
+npm install -D --save autoprefixer
+npm install -D --save postcss-cli
 
 
 # Trying to get development server accessible in session
