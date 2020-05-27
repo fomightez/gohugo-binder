@@ -16,7 +16,7 @@ Technical details
 
 - Hugo  
 	Apt install only is getting version 0.40. So don't use `apt.txt` as route to install. The `postBuild` file in this repo details the approach because the documented install presently listed for Linux isn't compatible with MyBinder/Binder. On the postive side the installation is easy once you know which route to use because the application itself is rather self-contained.   
-	Installed exntended version of HUGO as [Docsy](https://themes.gohugo.io/docsy/) theme needs that. Also installed postCSS following 'Prequisites' for Docsy theme listed [here]( https://themes.gohugo.io/docsy/)
+	Installed exntended version of HUGO as [Docsy](https://themes.gohugo.io/docsy/) theme needs that. Also installed postCSS following 'Prerequisites' for Docsy theme listed [here]( https://themes.gohugo.io/docsy/).
 
 
 - Go  
