@@ -64,4 +64,18 @@ npm install -D --save postcss-cli
 jupyter serverextension enable --sys-prefix jupyter_server_proxy
 #jupyter labextension install jupyterlab-server-proxy --no-build #Right now doesn't work with JupyterLab 1.0 and above; can either have old JupyterLab or the serverproxy but not both
 #try the solution from https://github.com/jupyterhub/jupyter-server-proxy/issues/139#issuecomment-544763062 for newer JupyterLab
-jupyter labextension install jupyterlab-server-proxy-saulshanabrook
+#jupyter labextension install jupyterlab-server-proxy-saulshanabrook
+# hmmmm...now seeing:
+'''
+An error occured.
+ValueError: The extension "jupyterlab-server-proxy-saulshanabrook" does not yet support the current version of JupyterLab.
+
+
+Conflicting Dependencies:
+JupyterLab              Extension      Package
+>=2.2.0 <2.3.0          >=1.0.0 <2.0.0 @jupyterlab/application
+>=2.2.0 <2.3.0          >=1.0.0 <2.0.0 @jupyterlab/launcher
+'''
+# Can that be fixed with a variation on code I originally tried using for server-proxy combined with what
+# it says at https://github.com/jupyterhub/jupyter-server-proxy#jupyterlab-extension now?
+jupyter labextension install @jupyterlab/server-proxy --no-build
