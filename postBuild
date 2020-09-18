@@ -71,5 +71,4 @@ jupyter labextension install @jupyterlab/server-proxy --no-build
 #jupyter labextension install jupyterlab_iframe --no-build
 #jupyter serverextension enable --py jupyterlab_iframe
 #jupyter lab build <--- it wanted to build after adding jupyterlab_iframe but it wouldn't build
-jupyter labextension install jupyterlab_iframe
-jupyter serverextension enable --py jupyterlab_iframe
+
