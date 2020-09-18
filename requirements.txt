@@ -1,3 +1,5 @@
 jupyterlab>=1.2.4 #HAD BEEN COMMENTING OUT Because right now doesn't work with JupyterLab 1.0 and above; can either have old JupyterLab or the serverproxy but not both
 jupyter_contrib_nbextensions
 jupyter-server-proxy
+jupyterlab_iframe
+
