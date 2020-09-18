@@ -56,7 +56,7 @@ rm ~/.local/bin/README.md
 cd ~
 # install postCSS following 'Prequisites' for Docsy theme listed at https://themes.gohugo.io/docsy/
 # added `postcss` after seeing `npm WARN autoprefixer@10.0.0 requires a peer of postcss@^8.0.2 
-# but none is installed. You must installpeer dependencies yourself.`
+# but none is installed. You must install peer dependencies yourself.` worth trying to add it.
 npm install -D --save postcss
 npm install -D --save autoprefixer
 npm install -D --save postcss-cli
